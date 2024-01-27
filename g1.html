@@ -1,0 +1,126 @@
+<html>
+ <head>
+  <style>
+   .watermark {
+    /* Used to position the watermark */
+    position: relative;
+}
+
+.watermark__inner {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 50px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
+
+.watermark__body {
+    /* Text color */
+    color: rgba(0, 0, 0, 0.2);
+
+    /* Text styles */
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    /* Rotate the text */
+    transform: rotate(-45deg);
+
+    /* Disable the selection */
+    user-select: none;
+}
+  </style>
+  <script>
+   c=0;
+   n=0;
+   l=0;
+   setTimeout(f5,30000);
+   function f5(){
+    alert("player A game has ended");
+    document.write("your score is"+l);
+   }
+   function f(){
+    alert("you are late");
+    document.getElementById("d").innerHTML="low performance";
+   }
+   //function f1(){
+    //clearTimeout(T);
+   //}
+   function fun(e){
+     T=setTimeout(f,5000);
+     v=document.getElementById("m1").style;
+     s1=Math.random()*1000+"px";
+     s2=Math.random()*1000+"px";
+     //if(e.clientX>v.top && e.clientY>v.left && e.clientX<v.bottom && e.clientY<v.right){
+      //fun(e);
+     //}
+     //if(s1<1330 && s2<636){
+      v.top=s1;
+      v.left=s2;
+      if(l==n)
+       n+=1;
+     //}
+   }
+   function fun1(e){
+     v=document.getElementById("m2").style;
+     s1=Math.random()*1000+"px";
+     s2=Math.random()*1000+"px";
+     //if(e.clientX>v.top && e.clientY>v.left && e.clientX<v.bottom && e.clientY<v.right){
+      //fun(e);
+     //}
+     //if(s1<1330 && s2<636){
+      v.top=s1;
+      v.left=s2;
+      if(n>c){
+       c+=1
+      }
+     //}
+   }
+   function fun2(e){
+     clearTimeout(T);
+     v=document.getElementById("m3").style;
+     s1=Math.random()*1000+"px";
+     s2=Math.random()*1000+"px";
+     //if(e.clientX>v.top && e.clientY>v.left && e.clientX<v.bottom && e.clientY<v.right){
+      //fun(e);
+     //}
+     //if(s1<1330 && s2<636){
+      v.top=s1;
+      v.left=s2;
+      if(c>l){
+       l+=1
+      }
+      document.getElementById("d1").innerHTML=l;
+      document.getElementById("dd").innerHTML=l;
+     //}
+   }
+  </script>
+ </head>
+ <body bgcolor="lightblue">
+  <h1 id="d"></h1>
+  <img style="position:absolute; top:95; left:95" onclick="fun(event)" src="i1.jpeg" height="20" width="20" id="m1"/>
+  <h1>score is</h1>
+  <h1 id="d1"></h1>
+  <img style="position:absolute; top:195; left:195" onclick="fun1(event)" src="i2.jpeg" height="20" width="20" id="m2"/>
+  <img style="position:absolute; top:295; left:295" onclick="fun2(event)" src="i3.jpeg" height="20" width="20" id="m3"/>
+  
+<div class="watermark">
+    <!-- Watermark container -->
+    <div class="watermark__inner">
+        <!-- The watermark -->
+        <div class="watermark__body">RAJ GAME</div>
+    </div>
+
+    <!-- Other content -->
+    ...
+  </div>
+ </body>
+</html>
